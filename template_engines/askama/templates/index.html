@@ -5,13 +5,9 @@
   <title>Actix web</title>
 </head>
 <body>
-  <h1>Welcome!</h1>
   <p>
-    <h3>What is your name?</h3>
-    <form>
-      <input type="text" name="name" /><br/>
-      <p><input type="submit"></p>
-    </form>
+  <!-- Copy-pasted from: https://github.com/djc/askama/blob/main/testing/tests/loops.rs#L121 -->
+    {% for (i, j) in (0..10).zip(10..20).zip(30..40) %}{{ i.0 }} {{ i.1 }} {{ j }} {% endfor %}
   </p>
 </body>
 </html>
